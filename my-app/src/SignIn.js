@@ -21,7 +21,7 @@ const SignIn = () => {
         let formData = new FormData();
         formData.append('password', password);
         formData.append('email', email);
-        await axios.post('http://localhost:5000/login', formData, config).then((res) => {
+        await axios.post('https://himalayan-backend.onrender.com/login', formData, config).then((res) => {
             if (res.status === 200) {
                 localStorage.setItem('user', JSON.stringify(res));
                 Navigate('/');

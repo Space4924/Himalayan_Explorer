@@ -9,7 +9,7 @@ export const Blogs = () => {
     const Cloud = async () => {
         console.log("useEffect called");
         try {
-            const response = await axios.get('http://localhost:5000/showblogs');
+            const response = await axios.get('https://himalayan-backend.onrender.com/showblogs');
             setItem(response);
         } catch (err) { console.log(err) }
     }
@@ -18,7 +18,7 @@ export const Blogs = () => {
         // console.log(ID,"This is Id");
         alert('Want to date the product from list');
         try{
-            const response=await axios.delete(`http://localhost:5000/deleteblog/${id}`);
+            const response=await axios.delete(`https://himalayan-backend.onrender.com/deleteblog/${id}`);
             if(response.status===200)console.log("Deleted");
             else console.error("Failed to delete resource");
         }catch(err){console.log("ApI request Failed:",err)}

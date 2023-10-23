@@ -22,7 +22,7 @@ export const PersonalBlogs = () => {
          try{
             let formData=new FormData();
             formData.append('userEmail',userEmail);
-            const response=await axios.post('http://localhost:5000/personalblogs',formData,config);
+            const response=await axios.post('https://himalayan-backend.onrender.com/personalblogs',formData,config);
             console.log(response,"getting response from backend");
             setItem(response);
 
@@ -32,7 +32,7 @@ export const PersonalBlogs = () => {
         // console.log(ID,"This is Id");
         alert('Want to date the product from list');
         try{
-            const response=await axios.delete(`http://localhost:5000/deleteblog/${id}`);
+            const response=await axios.delete(`https://himalayan-backend.onrender.com/deleteblog/${id}`);
             if(response.status===200)console.log("Deleted");
             else console.error("Failed to delete resource");
             Navigate('/profile');

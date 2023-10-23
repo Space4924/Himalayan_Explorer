@@ -19,7 +19,7 @@ const WriteBlogs = () => {
                     'Content-Type': "multipart/form-data"
                 }
             };
-            const url_data = 'http://localhost:5000/writeblog'
+            const url_data = 'https://himalayan-backend.onrender.com/writeblog'
             let form_Data = new FormData();
             form_Data.append('image', image);
             form_Data.append('newsArea', area);

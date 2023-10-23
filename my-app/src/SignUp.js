@@ -34,7 +34,7 @@ const SignUp = () => {
         formData.append("password", password);
         formData.append('number', number);
         try {
-            const res = await axios.post('http://localhost:5000/signup', formData, config);
+            const res = await axios.post('https://himalayan-backend.onrender.com/signup', formData, config);
             console.log(res, "this is response");
             if (res.status===200) {
                 localStorage.setItem('user', JSON.stringify(res));

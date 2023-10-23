@@ -41,7 +41,7 @@ export default function OTPPage() {
        let formData=new FormData();
        formData.append('email',userEmail);
        try{
-           const response=await axios.post('http://localhost:5000/otp',formData,config);
+           const response=await axios.post('https://himalayan-backend.onrender.com/otp',formData,config);
            console.log(response);
            localStorage.setItem('verification',JSON.stringify(1));
        }catch(err){console.log(err,"error")}
@@ -63,7 +63,7 @@ export default function OTPPage() {
         formData.append('email',userEmail);
         try{
  
-            const response=await axios.post('http://localhost:5000/otpCheck',formData,config);
+            const response=await axios.post('https://himalayan-backend.onrender.com/otpCheck',formData,config);
             console.log(response);
             // toast('Verification Done',{
             //     position:'top-left'

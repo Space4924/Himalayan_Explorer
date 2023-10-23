@@ -11,11 +11,12 @@ const cors = require('cors');
 const app = express();
 const nodemailer = require('nodemailer');
 const router = require('./routes/router');
+// console.log(process.env.EMAIL);
 app.use(router);
 app.use(express.json());
 app.use(cors(
     {
-        origin: "http://localhost:3000",
+        origin: "https://himalayan-backend.onrender.com",
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
     }
 ));
@@ -31,15 +32,15 @@ app.post('/mail', (req, resp) => {
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
+                user: 'thakurbhoopendrasingh4422@gmail.com',
+                pass: 'iaxr lmhi ipmv ebae'
             }
 
         });
 
         var mailOptions = {
             from: emailer,
-            to: process.env.EMAIL,
+            to: 'thakurbhoopendrasingh4422@gmail.com',
             subject: subjecter,
             text: messager
         };
@@ -147,7 +148,7 @@ app.post('/otp', async (req, resp) => {
     });
     try {
         var mailOptions = {
-            from: process.env.EMAIL,
+            from: 'thakurbhoopendrasingh4422@gmail.com',
             to: req.body.email,
             subject: "Sending Email For OTP validation",
             text: `OTP:-${OTP}`

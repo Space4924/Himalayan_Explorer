@@ -19,7 +19,7 @@ const Contact = () => {
        formData.append('emailer',email);
        formData.append('messager',message);
        try{
-           const response=await axios.post('http://localhost:5000/mail',formData,config);
+           const response=await axios.post('https://himalayan-backend.onrender.com/mail',formData,config);
            console.log(response,"response by backend");
 
        }catch(err){console.log(err,"error from frontend")}
