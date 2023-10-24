@@ -16,7 +16,7 @@ app.use(router);
 app.use(express.json());
 app.use(cors(
     {
-        origin: "https://himalayan-backend.onrender.com",
+        origin: "https://himalayan-explorer.netlify.app/",
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
     }
 ));
