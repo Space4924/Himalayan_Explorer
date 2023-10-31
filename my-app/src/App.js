@@ -13,6 +13,7 @@ import Profile from "./Profile";
 import Nav from "./Nav";
 import PrivateComponent from "./PrivateComponent";
 import OTPPage from "./Otp";
+import Feature from "./feature";
 
 function App() {
   // const auth=localStorage.getItem('user');
@@ -26,6 +27,9 @@ function App() {
        <Route path='/writeblog' element={<WriteBlogs/>}></Route>
        <Route path="/trek_leaders" element={<Trek_Leader />}></Route>
        <Route path='/otpverification' element={<OTPPage/>}></Route>
+       <Route path='/feature' element={<Feature/>}></Route>
+
+      
        <Route element={<PrivateComponent/>} >
        <Route path="/profile" element={<Profile/>}></Route>
        </Route>

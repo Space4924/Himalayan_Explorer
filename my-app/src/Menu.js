@@ -31,6 +31,7 @@ const Menu = () => {
     </Link>
     <Link
       className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 scale-100 hover:scale-110 ease-out duration-200"
+      to ='/feature'
     >
       Features
     </Link>
